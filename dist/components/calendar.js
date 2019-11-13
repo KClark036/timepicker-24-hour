@@ -37,6 +37,7 @@ $.fn.calendar = function(parameters) {
     queryArguments = [].slice.call(arguments, 1),
     returnedValue,
     timeGapTable = {
+      '1': {'row': 10, 'column': 6 },
       '5': {'row': 4, 'column': 3 },
       '10': {'row': 3, 'column': 2 },
       '15': {'row': 2, 'column': 2 },
@@ -1167,7 +1168,7 @@ $.fn.calendar.settings = {
   startCalendar      : null,       // jquery object or selector for another calendar that represents the start date of a date range
   endCalendar        : null,       // jquery object or selector for another calendar that represents the end date of a date range
   multiMonth         : 1,          // show multiple months when in 'day' mode
-  minTimeGap         : 5,
+  minTimeGap         : 1,
   showWeekNumbers    : null,       // show Number of Week at the very first column of a dayView
   disabledDates      : [],         // specific day(s) which won't be selectable and contain additional information.
   disabledDaysOfWeek : [],         // day(s) which won't be selectable(s) (0 = Sunday)
